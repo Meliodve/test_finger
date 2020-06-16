@@ -92,6 +92,11 @@ void analysis(DataPacket dataPacket,std::function<void(int w,int h,uint8_t* pDat
     uint8_t* pData=nullptr;
     uint8_t* x2=nullptr;
     switch(dataSize){
+    case 88*112/2:
+    case 88*112:
+        w = 88;
+        h = 112;
+        break;
     case 160*160/2:
     case 160*160:w=h=160;
         break;
